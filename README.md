@@ -2,9 +2,6 @@
 
 React frontend for the RAG-Powered News Chatbot. Provides chat interface with real-time streaming responses and session management.
 
-## 🌐 Live Demo
-👉 [https://intellinews-hrct.onrender.com](https://intellinews-hrct.onrender.com/)
-
 ## 🚀 Features
 
 - Interactive chat interface
@@ -49,6 +46,9 @@ frontend/
 ├── package.json
 └── .gitignore
 ```
+
+## 🌐 Live Demo
+👉 [https://intellinews-hrct.onrender.com](https://intellinews-hrct.onrender.com/)
 
 ## 📄 License
 
