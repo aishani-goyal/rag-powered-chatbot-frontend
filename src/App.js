@@ -21,10 +21,18 @@ function App() {
     initializeSession();
   }, []);
 
-  const handleNewSession = () => {
-    const newSessionId = uuidv4();
-    setSessionId(newSessionId);
+  const handleNewSession = async () => {
+    try {
+      const res = await fetch(`${process.env.REACT_APP_API_URL}/sessions`, {
+        method: "POST",
+      });
+      const data = await res.json();
+      setSessionId(data.id); // use backend session ID
+    } catch (err) {
+      console.error("Failed to start new session:", err);
+    }
   };
+
 
   if (isLoading) {
     return (

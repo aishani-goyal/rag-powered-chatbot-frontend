@@ -21,6 +21,13 @@ const Chat = ({ sessionId }) => {
     streamingMessage,
   } = useChat();
 
+  // ----------------------------
+  // Clear messages when sessionId changes
+  // ----------------------------
+  useEffect(() => {
+    clearMessages();
+  }, [sessionId, clearMessages]);
+
   // Auto-focus input on mount
   useEffect(() => {
     if (inputRef.current) {
