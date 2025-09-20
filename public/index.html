@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#2563eb" />
+    <meta name="description"
+        content="RAG-powered news chatbot that answers questions about recent news articles using AI" />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <title>IntelliNews - Your Personalized News Assistant</title>
+
+    <!-- Preload critical fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Meta tags for SEO -->
+    <meta property="og:title" content="IntelliNews - Your Personalized News Assistant" />
+    <meta property="og:description"
+        content="Chat with AI about recent news using advanced retrieval-augmented generation" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+</head>
+
+<body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+
+    <!-- Loading fallback -->
+    <script>
+        // Show loading indicator while React loads
+        if (!window.React) {
+            document.getElementById('root').innerHTML = `
+          <div style="
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            color: #64748b;
+          ">
+            <div style="
+              width: 40px;
+              height: 40px;
+              border: 3px solid #e2e8f0;
+              border-top: 3px solid #2563eb;
+              border-radius: 50%;
+              animation: spin 1s linear infinite;
+              margin-bottom: 16px;
+            "></div>
+            <p>Loading News Chat AI...</p>
+            <style>
+              @keyframes spin {
+                0% { transform: rotate(0deg); }
+                100% { transform: rotate(360deg); }
+              }
+            </style>
+          </div>
+        `;
+        }
+    </script>
+</body>
+
+</html>
