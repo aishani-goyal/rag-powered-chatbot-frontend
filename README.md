@@ -12,9 +12,9 @@ React frontend for the RAG-Powered News Chatbot. Provides chat interface with re
 
 ## 🛠 Tech Stack
 
-- React + SCSS
-- Axios / fetch for API calls
-- WebSocket / SSE for streaming (optional)
+- **React** – Component-based UI for chat interface
+- **SCSS** – Styling and layout
+- **Axios** – Handling API requests to the backend
 
 ## 📋 Prerequisites
 
